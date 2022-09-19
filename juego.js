@@ -28,7 +28,7 @@ const btn_letras = document.querySelectorAll( "#letras button" );
 btn.addEventListener('click', iniciar );
 
 function iniciar(event){
-    imagen.src = 'img/a0.png';
+    imagen.src = 'img/a0.jpg';
     btn.disabled = true;
     cant_errores = 0;
     cant_aciertos = 0; 
@@ -65,8 +65,8 @@ function click_letras(event){
 
     const letra = button.innerHTML.toLowerCase( );
     const palabra = palabrita.toLowerCase( ); // .toUpperCase( )
-    let mensaje=document.getElementById("mensaje")
-    let intentos=document.getElementById("intentos")
+    let mensaje=id("mensaje")
+    let intentos=id("intentos")
     let acerto = false;
     for( let i = 0; i < palabra.length;  i++ ){
         if( letra == palabra[i] ){
@@ -82,7 +82,7 @@ function click_letras(event){
         
         cant_errores++;
         intentos.innerHTML=9-cant_errores;
-        const source = `img/a${cant_errores}.png` ;
+        const source = `img/a${cant_errores}.jpg` ;
         imagen.src = source;
     }
 
