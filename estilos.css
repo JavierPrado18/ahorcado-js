@@ -1,0 +1,123 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background: #0a3b43 no-repeat center ;
+    
+    background-size: cover;
+    font-family: 'Carter One', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+h1{
+
+    color: white;
+}
+
+main{
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.845);
+    display: flex;
+    gap: 30px;
+    border-radius: 20px;
+}
+#jugar{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    background-color: #FC4A1A;
+    color: white;
+    cursor: pointer;
+}
+#jugar:hover{
+    color: #FC4A1A;
+    background-color: white;
+    font-weight: 600;
+}
+#jugar:disabled{
+    opacity: 0;
+    cursor: default;
+}
+
+#imagen{
+    width: 200px;
+    border-radius: 20px;
+}
+
+#palabra_a_adivinar{
+    height: 3em;
+}
+
+#palabra_a_adivinar span{
+    vertical-align: bottom;
+    font-size: 2em;
+    border-bottom: 2px solid black;
+    width: 30px;
+    text-align: center;
+    margin-right: 6px;
+    display: inline-block; /* sin esto, por ser un elemento de línea, no tomaría el width */
+}
+
+#letras{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+#letras button{
+    width: 28px;
+    padding: 6px 0;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #4ABDAC;
+    color: white;
+
+}
+#letras button:hover{
+    color: #4ABDAC;
+    background-color: white;
+
+}
+#letras button:disabled{
+    color: rgb(73, 71, 71);
+    background-color: rgba(128, 128, 128, 0.697);
+    cursor: not-allowed;
+}
+.modal{
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.588);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: all .8s;
+}
+.modal-container{
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+
+}
+.modal-container a{
+    text-decoration: none;
+
+}
+.modal-container a:hover{
+    color: #FC4A1A;
+    font-weight: 600;
+}
+.modal:target{
+    transform: translate(0);
+}
